@@ -9,7 +9,6 @@ Group:		Networking/Other
 URL:		http://sourceforge.net/projects/h323ac/
 Source0:	%{name}-%{version}-%{snap}.tar.bz2
 BuildRequires:	openh323-devel
-BuildRoot:	%{_tmppath}/%{name}-buildroot
 
 %description
 This application is a simple OpenH323-based WAV file player: you
