@@ -1,14 +1,18 @@
-%define snap 20041029
+%define snap	20071221
 
 Summary:	H323 Auto Caller plugin for Nagios
 Name:		h323ac
-Version:	1.0.4
-Release:	%mkrel 1.%{snap}.3
+Version:	1.0.5
+Release:	%mkrel 0.%{snap}.1
 License:	MPL
 Group:		Networking/Other
 URL:		http://sourceforge.net/projects/h323ac/
-Source0:	%{name}-%{version}-%{snap}.tar.bz2
+Source0:	%{name}-%{snap}.tar.lzma
+# Add some includes to h323ac.h that used to be in upstream pwlib
+# headers but aren't any more - AdamW 2007/12
+Patch0:		h323ac-1.0.5-includes.patch
 BuildRequires:	openh323-devel
+BuildRequires:	pwlib-devel
 
 %description
 This application is a simple OpenH323-based WAV file player: you
@@ -21,11 +25,10 @@ put it to other interesting uses, please email me to let me know
 what you have thought up.
 
 %prep
-
-%setup -q -n %{name}-%{version}-%{snap}
+%setup -q -n %{name}
+%patch0 -p1 -b .includes
 
 %build
-
 %make \
     OPENH323DIR="%{_datadir}/openh323" \
     PWLIBDIR="%{_datadir}/pwlib" \
@@ -49,5 +52,4 @@ install -m0755 obj_linux_*/h323ac %{buildroot}%{_libdir}/nagios/plugins/
 %defattr(-,root,root)
 %doc README
 %attr(0755,root,root) %{_libdir}/nagios/plugins/h323ac
-
 
