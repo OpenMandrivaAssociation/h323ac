@@ -3,7 +3,7 @@
 Summary:	H323 Auto Caller plugin for Nagios
 Name:		h323ac
 Version:	1.0.5
-Release:	%mkrel 0.%{snap}.1
+Release:	%mkrel 0.%{snap}.2
 License:	MPL
 Group:		Networking/Other
 URL:		http://sourceforge.net/projects/h323ac/
