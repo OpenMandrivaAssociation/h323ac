@@ -1,0 +1,32 @@
+--- h323ac/h323ac.h	2004-07-02 19:58:07.000000000 -0700
++++ h323ac/h323ac.h.new	2007-12-26 19:50:09.000000000 -0800
+@@ -26,6 +26,8 @@
+ #define _OH323TUT_H
+ 
+ #include <ptlib.h>
++#include <ptlib/pprocess.h>
++
+ 
+ #include "pconf.h"
+ 
+--- h323ac/nullchan.h	2006-05-16 15:53:41.000000000 -0700
++++ h323ac/nullchan.h.new	2007-12-26 19:50:25.000000000 -0800
+@@ -29,6 +29,7 @@
+ #include <h323.h>
+ #include <ptclib/pwavfile.h>
+ #include <ptclib/delaychan.h>
++#include <ptlib/sound.h>
+ 
+ 
+ // ***********************************************************************
+--- h323ac/wavchan.h	2006-05-16 15:53:41.000000000 -0700
++++ h323ac/wavchan.h.new	2007-12-26 19:48:44.000000000 -0800
+@@ -29,6 +29,8 @@
+ #include <h323.h>
+ #include <ptclib/pwavfile.h>
+ #include <ptclib/delaychan.h>
++#include <ptlib/sound.h>
++
+ #include "ep.h"
+ 
+ // ***********************************************************************
