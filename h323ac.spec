@@ -7,7 +7,7 @@ Release:	%mkrel 0.%{snap}.4
 License:	MPL
 Group:		Networking/Other
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-URL:		http://sourceforge.net/projects/h323ac/
+URL:		https://sourceforge.net/projects/h323ac/
 Source0:	%{name}-%{snap}.tar.lzma
 # Add some includes to h323ac.h that used to be in upstream pwlib
 # headers but aren't any more - AdamW 2007/12
