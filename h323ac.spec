@@ -12,6 +12,7 @@ Source0:	%{name}-%{snap}.tar.lzma
 # Add some includes to h323ac.h that used to be in upstream pwlib
 # headers but aren't any more - AdamW 2007/12
 Patch0:		h323ac-1.0.5-includes.patch
+BuildRequires:	make
 BuildRequires:	openh323-devel
 BuildRequires:	pwlib-devel
 
